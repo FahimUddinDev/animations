@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>submenu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .menu-container {
+        display: flex;
+        width: 100%;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        background: #1e1e1e;
+      }
+      .menu-wrapper {
+        display: flex;
+        list-style: none;
+        text-decoration: none;
+        gap: 20px;
+        font-size: 24px;
+        color: white;
+        font-weight: 600;
+      }
+      .menu-wrapper a {
+        text-decoration: none;
+        color: whitesmoke;
+      }
+      .have-submenu {
+        position: relative;
+      }
+
+      .submenu {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        background: transparent;
+        gap: 5px;
+        width: fit-content;
+        position: absolute;
+        overflow: hidden;
+        padding-top: 20px;
+        top: 0;
+        width: 0;
+      }
+      .submenu li {
+        width: 200px;
+        background: #1e1e1e;
+        padding: 10px 20px;
+        border-radius: 5px;
+        translate: 200px;
+        transition: 0.5s;
+      }
+      .submenu li:nth-child(2) {
+        transition-delay: 0.1s;
+      }
+      .submenu li:nth-child(3) {
+        transition-delay: 0.2s;
+      }
+      .submenu li:nth-child(4) {
+        transition-delay: 0.3s;
+      }
+      .submenu li:nth-child(5) {
+        transition-delay: 0.4s;
+      }
+      .submenu li:nth-child(6) {
+        transition-delay: 0.5s;
+      }
+      .have-submenu:hover .submenu {
+        width: 200px;
+      }
+      .have-submenu:hover .submenu li {
+        translate: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu-container">
+      <ul class="menu-wrapper">
+        <li><a href="#" class="">Home</a></li>
+        <li class="have-submenu">
+          <a href="#" class="">projects</a>
+          <ul class="submenu">
+            <li><a href="#" class="subnav-item">projects 1</a></li>
+            <li><a href="#" class="">projects 2</a></li>
+            <li><a href="#" class="">projects 3</a></li>
+            <li><a href="#" class="">projects 4</a></li>
+            <li><a href="#" class="">projects 5</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="">Products</a></li>
+        <li><a href="#" class="">contact</a></li>
+        <li><a href="#" class="">Join</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
